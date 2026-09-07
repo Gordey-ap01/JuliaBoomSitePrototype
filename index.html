@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Яркий интерактивный эскиз сайта студии организации праздников «Юля - Бумм!» в Комсомольске-на-Амуре.">
+  <meta name="theme-color" content="#ffd800">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Юля - Бумм! — интерактивный эскиз сайта</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site-preview.css">
+  <script src="assets/site-preview.js" defer></script>
+</head>
+<body data-theme="boom">
+  <a class="skip-link" href="#main">К содержанию</a>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <aside class="prototype-ribbon" aria-label="Статус проекта">
+    <strong>Это прототип</strong>
+    <span>Проверяем структуру и настроение — дизайн обсудим отдельно.</span>
+    <button type="button" data-prototype-open>Что уже работает и что дальше?</button>
+  </aside>
+
+  <header class="site-header" data-header>
+    <a class="wordmark" href="#top" aria-label="Юля - Бумм! — на главную">
+      <span>СТУДИЯ ОРГАНИЗАЦИИ</span>
+      <strong>ЮЛЯ - БУММ!</strong>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+      <span class="menu-toggle-label">Меню</span>
+      <span class="menu-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Основное меню" data-menu>
+      <a href="#formats">Форматы</a>
+      <a href="#julia">О Юлии</a>
+      <a href="#reviews">Отзывы</a>
+      <a class="nav-cta" href="#request">Проверить дату</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="ambient-confetti" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span>Комсомольск-на-Амуре</span> Юлия собирает праздник лично</p>
+        <fieldset class="style-picker" aria-describedby="style-picker-note">
+          <legend>Как может выглядеть сайт</legend>
+          <div class="style-picker-buttons">
+            <button type="button" data-theme-choice="boom" aria-pressed="true">
+              <i class="style-swatch style-swatch-boom" aria-hidden="true"></i>
+              <span><b>Бумажный салют</b><small>яркий плакат</small></span>
+            </button>
+            <button type="button" data-theme-choice="aurora" aria-pressed="false">
+              <i class="style-swatch style-swatch-aurora" aria-hidden="true"></i>
+              <span><b>Сияние в воздухе</b><small>светлый градиент</small></span>
+            </button>
+            <button type="button" data-theme-choice="midnight" aria-pressed="false">
+              <i class="style-swatch style-swatch-midnight" aria-hidden="true"></i>
+              <span><b>После заката</b><small>тёмная феерия</small></span>
+            </button>
+          </div>
+          <p id="style-picker-note" data-theme-note>Плакатный ритм, бумажные слои и максимум цвета.</p>
+        </fieldset>
+        <h1 id="page-title">
+          <span>Праздник,</span>
+          <span class="hero-outline">который</span>
+          <em>устроит БУММ!</em>
+        </h1>
+        <p class="hero-lead">От первой идеи до момента, когда гости кричат «ещё!». Детские программы, взрослые события и свадьбы — с характером, а не по шаблону.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#formats">Выбрать свой праздник <span aria-hidden="true">↓</span></a>
+          <button class="button button-pop" type="button" data-confetti>Показать БУММ!</button>
+        </div>
+        <dl class="hero-proof" aria-label="Коротко о студии">
+          <div><dt>5,0</dt><dd>рейтинг в 2ГИС</dd></div>
+          <div><dt>3</dt><dd>живых отзыва</dd></div>
+          <div><dt>8</dt><dd>фото в карточке</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-stage tilt" aria-label="Визуальный образ будущего сайта">
+        <div class="hero-image-wrap">
+          <img src="assets/images/celebration-hero.webp" alt="Яркая авторская композиция с конфетти, светом и праздничными декорациями" width="1800" height="1000" fetchpriority="high">
+          <span class="photo-note">эскиз атмосферы</span>
+        </div>
+        <div class="burst burst-one" aria-hidden="true">!</div>
+        <div class="burst burst-two" aria-hidden="true">БУММ</div>
+        <div class="ticket">
+          <span>Праздник начинается</span>
+          <strong>с хорошей идеи</strong>
+          <small>а дальше Юлия всё соберёт</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="party-lab section-pad" id="formats" aria-labelledby="formats-title">
+      <div class="section-intro reveal">
+        <p class="chapter">01 / Один простой выбор</p>
+        <h2 id="formats-title">Что <em>празднуем?</em></h2>
+        <p>Не нужно изучать бесконечный каталог. Сначала выбираем повод — и сразу видим подходящий сценарий.</p>
+      </div>
+
+      <div class="party-tabs reveal" role="tablist" aria-label="Выберите формат события">
+        <button id="tab-kids" type="button" role="tab" aria-selected="true" aria-controls="party-panel" data-party="kids">Детский праздник</button>
+        <button id="tab-adults" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="adults">Взрослое событие</button>
+        <button id="tab-wedding" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="wedding">Свадьба</button>
+      </div>
+
+      <article class="party-panel reveal" id="party-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-kids">
+        <div class="party-visual tilt">
+          <img data-party-image src="assets/images/feature-catalogs-programs.webp" alt="Три сказочные сцены праздничных программ для детей" width="1200" height="800" loading="lazy">
+          <span class="scribble" data-party-sticker>Вау с первой минуты</span>
+        </div>
+        <div class="party-copy">
+          <p class="party-number" aria-hidden="true">01</p>
+          <p class="eyebrow" data-party-kicker>Для детей и подростков</p>
+          <h3 data-party-title>Герой приходит — комната меняется</h3>
+          <p data-party-text>Подберём образ и программу под возраст, пространство и темперамент компании. В отзывах особенно вспоминают энергичную программу с Соником и появление Бамблби.</p>
+          <ul data-party-list>
+            <li>аниматор и персонаж</li>
+            <li>игровой сценарий</li>
+            <li>фото живых эмоций</li>
+          </ul>
+          <a class="text-link" href="#request">Хочу обсудить такой праздник <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="formats section-pad" aria-labelledby="services-title">
+      <div class="tape tape-blue" aria-hidden="true"><span>ПРАЗДНИК НЕ ДОЛЖЕН БЫТЬ ТИХИМ</span><span>ПРАЗДНИК НЕ ДОЛЖЕН БЫТЬ ТИХИМ</span></div>
+      <div class="section-intro reveal">
+        <p class="chapter">02 / Можно начать отсюда</p>
+        <h2 id="services-title">Три входа. <em>Один БУММ.</em></h2>
+      </div>
+      <div class="format-grid">
+        <article class="format-card format-card-blue reveal">
+          <span class="format-index">А</span>
+          <p class="format-label">Детям и подросткам</p>
+          <h3>Анимационные программы</h3>
+          <p>Персонажи, игры и динамика, которую подстраивают под возраст и компанию.</p>
+          <a href="#request" aria-label="Обсудить анимационную программу">Обсудить <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="format-card format-card-pink reveal">
+          <span class="format-index">Б</span>
+          <p class="format-label">Взрослым</p>
+          <h3>Дни рождения и события</h3>
+          <p>Атмосфера, ведущий, фотозона, развлечения — всё складывается вокруг ваших гостей.</p>
+          <a href="#request" aria-label="Обсудить взрослое событие">Обсудить <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="format-card format-card-yellow reveal">
+          <span class="format-index">В</span>
+          <p class="format-label">Для двоих и семьи</p>
+          <h3>Свадьбы и регистрации</h3>
+          <p>Организация с нуля, детали по референсам и спокойствие в день события.</p>
+          <a href="#request" aria-label="Обсудить свадьбу или регистрацию">Обсудить <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="spotlight section-pad" aria-labelledby="mimes-title">
+      <div class="spotlight-art reveal tilt">
+        <img src="assets/images/feature-mimes.webp" alt="Два мима встречают гостей в ярком праздничном пространстве" width="1536" height="1024" loading="lazy">
+        <span class="spotlight-caption">здесь появятся реальные кадры Юлии</span>
+      </div>
+      <div class="spotlight-copy reveal">
+        <p class="chapter">Уже есть в публичном прайсе</p>
+        <h2 id="mimes-title">Гости ещё заходят — <em>шоу уже началось</em></h2>
+        <p>Мимы встречают гостей, задают настроение и превращают ожидание начала в часть события.</p>
+        <div class="price-tag" aria-label="Стоимость от восьми до десяти тысяч рублей">
+          <span>Мимы · атмосферные артисты</span>
+          <strong>8–10 тыс.</strong>
+        </div>
+        <small>Цена взята из карточки 2ГИС и не является публичной офертой.</small>
+        <a class="button button-light" href="#request">Спросить про мимов</a>
+      </div>
+    </section>
+
+    <section class="julia section-pad" id="julia" aria-labelledby="julia-title">
+      <div class="julia-copy reveal">
+        <p class="chapter">03 / Человек за праздником</p>
+        <h2 id="julia-title">Юлия держит детали. <em>Вы проживаете момент.</em></h2>
+        <p class="julia-lead">По отзывам клиентов, Юлия помогает собрать событие от первой идеи: подобрать площадку и оформление, развлечения и команду — а в важный день оставить заказчику только приятное волнение.</p>
+        <div class="julia-tags" aria-label="Направления работы">
+          <span>детские праздники</span>
+          <span>свадьбы</span>
+          <span>выездные регистрации</span>
+          <span>взрослые события</span>
+        </div>
+      </div>
+      <figure class="julia-photo reveal tilt">
+        <img src="assets/images/feature-trust-people.webp" alt="Иллюстративный коллаж команды организаторов и артистов" width="1200" height="800" loading="lazy">
+        <figcaption>В финальном сайте этот кадр заменим настоящей фотографией Юлии и команды.</figcaption>
+      </figure>
+    </section>
+
+    <section class="reviews section-pad" id="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-head reveal">
+        <p class="chapter">04 / Говорят гости</p>
+        <h2 id="reviews-title"><span>5,0</span> — когда всё сложилось</h2>
+        <a class="text-link" href="https://2gis.ru/komsomolsk-on-amur/search/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B4%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D1%85%20%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2/attributeId/70000201006748186/firm/70000001116105078/137.077978%2C50.58515?m=137.07716%2C50.58533%2F18.51" target="_blank" rel="noreferrer">Открыть карточку в 2ГИС <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="review-track">
+        <blockquote class="review review-yellow reveal">
+          <p>Юлия помогла собрать юбилей целиком: от фотозоны и угощения до развлечений. Получилось душевно и необычно.</p>
+          <footer>Пересказ отзыва Валентины · август 2026</footer>
+        </blockquote>
+        <blockquote class="review review-cyan reveal">
+          <p>На детском празднике были вовлечены и дети, и взрослые. Особенно запомнились Соник и Бамблби.</p>
+          <footer>Пересказ отзыва Елены · август 2026</footer>
+        </blockquote>
+        <blockquote class="review review-pink reveal">
+          <p>Свадьбу организовали с нуля и внимательно собрали детали по референсам — ожидание совпало с реальностью.</p>
+          <footer>Пересказ отзыва Марии · август 2026</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="request section-pad" id="request" aria-labelledby="request-title">
+      <div class="request-copy reveal">
+        <p class="chapter">Финал — без длинной анкеты</p>
+        <h2 id="request-title">Есть дата? <em>Давайте устроим БУММ!</em></h2>
+        <p>Четыре коротких поля — и Юлия уже понимает, с чего начать разговор.</p>
+        <address>
+          <strong>«Юля - Бумм!»</strong><br>
+          Студия организации праздников<br>
+          Советская улица, 5 · 2 этаж<br>
+          Комсомольск-на-Амуре<br>
+          <span>Приём по предварительной записи</span>
+        </address>
+      </div>
+
+      <form class="request-form reveal" data-request-form>
+        <div class="field field-wide">
+          <label for="request-event">Что празднуем?</label>
+          <select id="request-event" name="event" required>
+            <option value="">Выберите событие</option>
+            <option>Детский праздник</option>
+            <option>День рождения или взрослое событие</option>
+            <option>Свадьба или выездная регистрация</option>
+            <option>Другое событие</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="request-date">Когда?</label>
+          <input id="request-date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="request-name">Как вас зовут?</label>
+          <input id="request-name" name="name" type="text" autocomplete="name" placeholder="Имя" minlength="2" maxlength="80" required>
+        </div>
+        <div class="field field-wide">
+          <label for="request-contact">Куда ответить?</label>
+          <input id="request-contact" name="contact" type="text" autocomplete="tel" placeholder="Телефон или мессенджер" minlength="5" maxlength="120" required>
+        </div>
+        <button class="submit-boom field-wide" type="submit">
+          <span>Показать, как отправится заявка</span>
+          <b aria-hidden="true">БУММ!</b>
+        </button>
+        <p class="form-note field-wide">Это интерактивный эскиз: данные никуда не отправляются. Рабочий контакт подключим после согласования.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="wordmark wordmark-footer" href="#top"><span>СТУДИЯ ОРГАНИЗАЦИИ ПРАЗДНИКОВ</span><strong>ЮЛЯ - БУММ!</strong></a>
+      <p>Интерактивный эскиз будущего сайта · 2026</p>
+    </div>
+    <p>Факты взяты из открытой карточки 2ГИС. Изображения — авторские иллюстративные материалы, не фотографии клиента.</p>
+  </footer>
+
+  <dialog class="success-dialog" data-success-dialog aria-labelledby="success-title">
+    <button class="dialog-close" type="button" aria-label="Закрыть" data-dialog-close>×</button>
+    <span class="dialog-burst" aria-hidden="true">БУММ!</span>
+    <h2 id="success-title">Вот так заявка прилетит Юлии</h2>
+    <p data-success-text></p>
+    <p class="dialog-note">Сейчас это демонстрация — отправки нет. После подключения контакта здесь будет настоящее подтверждение.</p>
+    <button class="button button-dark" type="button" data-dialog-done>Понятно, класс!</button>
+  </dialog>
+
+  <dialog class="prototype-dialog" data-prototype-dialog aria-labelledby="prototype-title">
+    <button class="dialog-close" type="button" aria-label="Закрыть пояснение о прототипе" data-prototype-close>×</button>
+    <p class="prototype-kicker">Чтобы было с чего начать разговор</p>
+    <h2 id="prototype-title">Это не готовый сайт. Это <em>живой прототип.</em></h2>
+    <p class="prototype-main-note"><strong>Самое главное:</strong> дизайн, шрифты, цвета, фотографии и форма кнопок ещё будут обсуждаться отдельно. Пока придерживаемся этих трёх праздничных направлений, чтобы смотреть не на пустой лист, а на понятные работающие примеры.</p>
+    <div class="prototype-columns">
+      <section aria-labelledby="prototype-ready-title">
+        <h3 id="prototype-ready-title">Уже можно попробовать</h3>
+        <ul>
+          <li>три разных арт-направления;</li>
+          <li>выбор формата праздника;</li>
+          <li>основные услуги, история Юлии и отзывы;</li>
+          <li>адаптивное меню и анимации;</li>
+          <li>пример короткой заявки.</li>
+        </ul>
+      </section>
+      <section aria-labelledby="prototype-next-title">
+        <h3 id="prototype-next-title">Ещё нужно сделать</h3>
+        <ul>
+          <li>настоящие логотип, фотографии и тексты Юлии;</li>
+          <li>каталог артистов и профили каждого артиста;</li>
+          <li>каталог программ и полные карточки услуг;</li>
+          <li>живой календарь свободных дат;</li>
+          <li>рабочая отправка заявок и подключение мессенджеров;</li>
+          <li>административная панель, аналитика и SEO.</li>
+        </ul>
+      </section>
+    </div>
+    <button class="button button-dark prototype-continue" type="button" data-prototype-continue>Понятно — смотреть прототип</button>
+  </dialog>
+</body>
+</html>
