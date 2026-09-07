@@ -340,18 +340,47 @@ img {
 }
 
 .style-picker {
+  position: relative;
   max-width: 45rem;
   margin: 0 0 1.5rem;
-  padding: 0;
-  border: 0;
+  padding: 1rem;
+  border: 3px solid var(--ink);
+  background: rgba(255,255,255,0.94);
+  box-shadow: 8px 8px 0 var(--ink);
+  transform: rotate(-0.35deg);
 }
 
 .style-picker legend {
-  margin-bottom: 0.55rem;
-  font-size: 0.68rem;
+  max-width: calc(100% - 1rem);
+  padding: 0.38rem 0.7rem;
+  border: 2px solid var(--ink);
+  background: var(--pink);
+  box-shadow: 3px 3px 0 var(--ink);
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.style-picker legend span {
+  display: inline-block;
+  margin-right: 0.45rem;
+  padding: 0.12rem 0.35rem;
+  background: var(--yellow);
+}
+
+.style-picker-help {
+  margin: 0.15rem 0 0.8rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.style-picker-help strong {
+  display: inline-block;
+  margin-right: 0.22rem;
+  color: var(--blue);
+  font-family: 'Boom Hand', cursive;
+  font-size: 1.35rem;
 }
 
 .style-picker-buttons {
@@ -361,22 +390,50 @@ img {
 }
 
 .style-picker-buttons button {
+  position: relative;
   display: grid;
   min-width: 0;
+  min-height: 4.7rem;
   grid-template-columns: 2.2rem minmax(0, 1fr);
   gap: 0.55rem;
   align-items: center;
-  padding: 0.55rem;
-  border: 2px solid var(--ink);
+  padding: 0.65rem 0.6rem 1.55rem;
+  border: 3px solid var(--ink);
   background: var(--white);
+  box-shadow: 3px 3px 0 var(--ink);
+  cursor: pointer;
   text-align: left;
   transition: transform 180ms ease, box-shadow 180ms ease, background-color 280ms ease;
 }
 
+.style-picker-buttons button::after {
+  position: absolute;
+  right: 0.45rem;
+  bottom: 0.32rem;
+  padding: 0.12rem 0.35rem;
+  color: var(--white);
+  background: var(--blue);
+  content: 'НАЖАТЬ И ПРИМЕРИТЬ';
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.style-picker-buttons button:hover {
+  z-index: 1;
+  box-shadow: 6px 7px 0 var(--ink);
+  transform: translateY(-4px) rotate(-1deg);
+}
+
 .style-picker-buttons button[aria-pressed="true"] {
   background: var(--yellow);
-  box-shadow: 4px 4px 0 var(--ink);
-  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: translate(-2px, -2px) rotate(0.5deg);
+}
+
+.style-picker-buttons button[aria-pressed="true"]::after {
+  background: var(--ink);
+  content: '✓ СЕЙЧАС ВЫБРАН';
 }
 
 .style-swatch {
@@ -421,6 +478,11 @@ img {
   margin: 0.65rem 0 0;
   font-size: 0.7rem;
   font-weight: 700;
+}
+
+.style-picker > .style-picker-help {
+  margin: 0.15rem 0 0.8rem;
+  font-weight: 400;
 }
 
 .hero h1 {
@@ -533,6 +595,56 @@ img {
   position: relative;
   z-index: 1;
   transform-style: preserve-3d;
+}
+
+.hero-logo-layer {
+  position: absolute;
+  z-index: 4;
+  top: 17%;
+  left: 50%;
+  width: min(22rem, 68%);
+  margin: 0;
+  pointer-events: none;
+  transform: translateX(-50%) rotate(-3deg) translateZ(42px);
+  animation: logo-hover 4.6s ease-in-out infinite;
+}
+
+.hero-logo-crop {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 1.1rem 2.4rem rgba(4,20,40,0.3), 7px 8px 0 var(--ink);
+}
+
+.hero-logo-crop img {
+  position: absolute;
+  top: -14%;
+  left: -14%;
+  width: 128%;
+  max-width: none;
+  height: 128%;
+  object-fit: cover;
+}
+
+.hero-logo-layer figcaption {
+  position: absolute;
+  right: -0.25rem;
+  bottom: 7%;
+  padding: 0.35rem 0.55rem;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  background: var(--yellow);
+  box-shadow: 3px 3px 0 var(--ink);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(5deg);
 }
 
 .hero-image-wrap {
@@ -1497,6 +1609,11 @@ img {
   to { transform: translateX(-100%); }
 }
 
+@keyframes logo-hover {
+  0%, 100% { transform: translateX(-50%) translateY(0) rotate(-3deg) translateZ(42px); }
+  50% { transform: translateX(-50%) translateY(-0.8rem) rotate(1deg) translateZ(55px); }
+}
+
 @media (max-width: 1050px) {
   .tape {
     display: block;
@@ -1659,28 +1776,44 @@ img {
   }
 
   .style-picker-buttons {
-    gap: 0.4rem;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
   }
 
   .style-picker-buttons button {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 0.45rem 0.3rem;
-    text-align: center;
+    min-height: 4.25rem;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    justify-items: start;
+    padding: 0.55rem 0.7rem 1.45rem;
+    text-align: left;
   }
 
   .style-picker-buttons small {
-    display: none;
+    display: block;
   }
 
   .style-picker-buttons b {
-    min-height: 2.25em;
-    font-size: 0.62rem;
+    min-height: 0;
+    font-size: 0.72rem;
     white-space: normal;
   }
 
+  .style-picker {
+    margin-bottom: 1.75rem;
+    padding: 0.8rem;
+    transform: none;
+  }
+
+  .style-picker legend {
+    font-size: 0.65rem;
+  }
+
+  .style-picker-help {
+    font-size: 0.68rem;
+  }
+
   .style-picker > p {
-    min-height: 2.2em;
+    min-height: 0;
   }
 
   .hero h1 em {
@@ -1710,6 +1843,16 @@ img {
   .hero-stage {
     width: calc(100% - 1rem);
     margin-top: 1.5rem;
+  }
+
+  .hero-logo-layer {
+    top: 13%;
+    width: min(17rem, 72%);
+  }
+
+  .hero-logo-layer figcaption {
+    right: 0;
+    bottom: 5%;
   }
 
   .hero-image-wrap {
@@ -1969,6 +2112,21 @@ body[data-theme="aurora"] .wordmark strong {
   letter-spacing: 0.02em;
 }
 
+body[data-theme="aurora"] .style-picker {
+  border-color: rgba(40,22,66,0.28);
+  border-radius: 1.6rem 0.45rem 1.6rem 0.45rem;
+  background: rgba(255,254,252,0.82);
+  box-shadow: 0 1.25rem 3rem rgba(104,69,232,0.16);
+  transform: none;
+}
+
+body[data-theme="aurora"] .style-picker legend,
+body[data-theme="aurora"] .style-picker-buttons button::after {
+  border-color: rgba(40,22,66,0.28);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
 body[data-theme="aurora"] .nav-cta,
 body[data-theme="aurora"] .style-picker-buttons button,
 body[data-theme="aurora"] .button,
@@ -2011,6 +2169,11 @@ body[data-theme="aurora"] .hero::before {
 
 body[data-theme="aurora"] .hero::after {
   background: rgba(104,69,232,0.42);
+}
+
+body[data-theme="aurora"] .hero-logo-crop {
+  border-color: rgba(255,255,255,0.88);
+  box-shadow: 0 1.8rem 4rem rgba(104,69,232,0.28), 0 0 0 1px rgba(40,22,66,0.18);
 }
 
 body[data-theme="aurora"] .hero-noise {
@@ -2210,6 +2373,24 @@ body[data-theme="midnight"] .site-header {
   background: rgba(7,14,29,0.9);
 }
 
+body[data-theme="midnight"] .style-picker {
+  border-color: rgba(255,201,90,0.58);
+  background: rgba(8,15,32,0.9);
+  box-shadow: 0 0 0 1px rgba(255,201,90,0.2), 0 1.8rem 4rem rgba(0,0,0,0.42);
+  transform: none;
+}
+
+body[data-theme="midnight"] .style-picker legend {
+  color: #091126;
+  border-color: #fff5dc;
+  background: linear-gradient(120deg, #ffc95a, #ff6fae);
+  box-shadow: 3px 3px 0 #fff5dc;
+}
+
+body[data-theme="midnight"] .style-picker-help strong {
+  color: #ffc95a;
+}
+
 body[data-theme="midnight"] .style-picker-buttons button {
   color: #fff5dc;
   background: rgba(16,26,49,0.84);
@@ -2238,6 +2419,11 @@ body[data-theme="midnight"] .hero::after {
   border: 0;
   background: rgba(255,77,166,0.3);
   filter: blur(28px);
+}
+
+body[data-theme="midnight"] .hero-logo-crop {
+  border-color: #ffc95a;
+  box-shadow: 0 0 0 1px rgba(255,245,220,0.35), 0 0 4rem rgba(255,77,166,0.48);
 }
 
 body[data-theme="midnight"] .hero-noise {
