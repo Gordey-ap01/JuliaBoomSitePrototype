@@ -32,6 +32,7 @@
     </button>
     <nav class="site-nav" id="site-menu" aria-label="Основное меню" data-menu>
       <a href="#formats">Форматы</a>
+      <a href="#workshop">Возможности</a>
       <a href="#julia">О Юлии</a>
       <a href="#reviews">Отзывы</a>
       <a class="nav-cta" href="#request">Проверить дату</a>
@@ -107,13 +108,15 @@
       <div class="section-intro reveal">
         <p class="chapter">01 / Один простой выбор</p>
         <h2 id="formats-title">Что <em>празднуем?</em></h2>
-        <p>Не нужно изучать бесконечный каталог. Сначала выбираем повод — и сразу видим подходящий сценарий.</p>
+        <p>Не нужно изучать бесконечный каталог. Сначала выбираем повод — и сразу видим фотографию, подходящие сценарии и команду.</p>
       </div>
 
       <div class="party-tabs reveal" role="tablist" aria-label="Выберите формат события">
         <button id="tab-kids" type="button" role="tab" aria-selected="true" aria-controls="party-panel" data-party="kids">Детский праздник</button>
-        <button id="tab-adults" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="adults">Взрослое событие</button>
         <button id="tab-wedding" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="wedding">Свадьба</button>
+        <button id="tab-anniversary" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="anniversary">Юбилей</button>
+        <button id="tab-new-year" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="new-year">Новый год</button>
+        <button id="tab-adults" type="button" role="tab" aria-selected="false" aria-controls="party-panel" data-party="adults">Взрослое событие</button>
       </div>
 
       <article class="party-panel reveal" id="party-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-kids">
@@ -127,44 +130,72 @@
           <h3 data-party-title>Герой приходит — комната меняется</h3>
           <p data-party-text>Подберём образ и программу под возраст, пространство и темперамент компании. В отзывах особенно вспоминают энергичную программу с Соником и появление Бамблби.</p>
           <ul data-party-list>
-            <li>аниматор и персонаж</li>
-            <li>игровой сценарий</li>
-            <li>фото живых эмоций</li>
+            <li>день рождения</li>
+            <li>выпускной</li>
+            <li>день именинника</li>
+            <li>тематическая вечеринка</li>
           </ul>
+          <div class="party-modules" aria-label="Будущие возможности этого раздела">
+            <p>Посмотреть, что нужно для запуска:</p>
+            <div data-party-modules>
+              <button type="button" data-module-preview="program-catalog">Каталог программ</button>
+              <button type="button" data-module-preview="artist-catalog">Каталог артистов</button>
+              <button type="button" data-module-preview="costume-catalog">Каталог костюмов</button>
+            </div>
+          </div>
           <a class="text-link" href="#request">Хочу обсудить такой праздник <span aria-hidden="true">↗</span></a>
         </div>
       </article>
+      <blockquote class="story-line reveal">«Расскажите нам вашу историю — и мы напишем праздничную главу вашей жизни».</blockquote>
     </section>
 
-    <section class="formats section-pad" aria-labelledby="services-title">
-      <div class="tape tape-blue" aria-hidden="true"><span>ПРАЗДНИК НЕ ДОЛЖЕН БЫТЬ ТИХИМ</span><span>ПРАЗДНИК НЕ ДОЛЖЕН БЫТЬ ТИХИМ</span></div>
+    <section class="workshop section-pad" id="workshop" aria-labelledby="services-title">
+      <div class="tape tape-blue" aria-hidden="true"><span>ЗА КРАСИВОЙ КНОПКОЙ — НАСТОЯЩАЯ РАБОТА</span><span>ЗА КРАСИВОЙ КНОПКОЙ — НАСТОЯЩАЯ РАБОТА</span></div>
       <div class="section-intro reveal">
-        <p class="chapter">02 / Можно начать отсюда</p>
-        <h2 id="services-title">Три входа. <em>Один БУММ.</em></h2>
+        <p class="chapter">02 / Пока в мастерской</p>
+        <h2 id="services-title">Это не заглушки. <em>Это план.</em></h2>
+        <p>Нажмите на будущую функцию — откроется простое объяснение: какие материалы понадобятся от Юлии, что сделает Гордей и сколько этапов скрывается за одной кнопкой.</p>
       </div>
-      <div class="format-grid">
-        <article class="format-card format-card-blue reveal">
-          <span class="format-index">А</span>
-          <p class="format-label">Детям и подросткам</p>
-          <h3>Анимационные программы</h3>
-          <p>Персонажи, игры и динамика, которую подстраивают под возраст и компанию.</p>
-          <a href="#request" aria-label="Обсудить анимационную программу">Обсудить <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="format-card format-card-pink reveal">
-          <span class="format-index">Б</span>
-          <p class="format-label">Взрослым</p>
-          <h3>Дни рождения и события</h3>
-          <p>Атмосфера, ведущий, фотозона, развлечения — всё складывается вокруг ваших гостей.</p>
-          <a href="#request" aria-label="Обсудить взрослое событие">Обсудить <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="format-card format-card-yellow reveal">
-          <span class="format-index">В</span>
-          <p class="format-label">Для двоих и семьи</p>
-          <h3>Свадьбы и регистрации</h3>
-          <p>Организация с нуля, детали по референсам и спокойствие в день события.</p>
-          <a href="#request" aria-label="Обсудить свадьбу или регистрацию">Обсудить <span aria-hidden="true">→</span></a>
-        </article>
+      <div class="workshop-layout">
+        <figure class="workshop-visual reveal tilt">
+          <img src="assets/images/future-catalogs.webp" alt="Эскиз закулисного каталога артистов, костюмов и реквизита" width="1440" height="960" loading="lazy">
+          <figcaption>Не фотография агентства — образ того, как может выглядеть единая база.</figcaption>
+        </figure>
+        <div class="roadmap-grid reveal" aria-label="Функции будущего сайта">
+          <button class="roadmap-card roadmap-card-pink" type="button" data-module-preview="artist-catalog">
+            <span>01 · люди</span><strong>Каталог артистов</strong><small>Профили, жанры, фото, видео и занятость.</small><b>Что потребуется? →</b>
+          </button>
+          <button class="roadmap-card roadmap-card-yellow" type="button" data-module-preview="costume-catalog">
+            <span>02 · образы</span><strong>Каталог костюмов</strong><small>Размеры, состояние, комплектность и даты.</small><b>Что потребуется? →</b>
+          </button>
+          <button class="roadmap-card roadmap-card-cyan" type="button" data-module-preview="program-catalog">
+            <span>03 · сценарии</span><strong>Каталог программ</strong><small>Возраст, длительность, состав и условия.</small><b>Что потребуется? →</b>
+          </button>
+          <button class="roadmap-card roadmap-card-blue" type="button" data-module-preview="decor-catalog">
+            <span>04 · пространство</span><strong>Декор и реквизит</strong><small>Фотозоны, оформление и реальные комплекты.</small><b>Что потребуется? →</b>
+          </button>
+        </div>
       </div>
+
+      <article class="partner-feature reveal">
+        <img src="assets/images/event-partners.webp" alt="Эскиз слаженной работы организатора, фотографа, видеографа и кондитера" width="1440" height="960" loading="lazy">
+        <div>
+          <p class="chapter">Проверенная команда</p>
+          <h3>Фотограф. Видеограф. Кондитер.</h3>
+          <p>Юлия работает с ними постоянно — на сайте их можно предлагать как понятные дополнения к свадьбе, юбилею или детскому празднику.</p>
+          <button class="text-button" type="button" data-module-preview="partner-services">Как это подключить к сайту →</button>
+        </div>
+      </article>
+
+      <article class="bonus-teaser reveal" aria-labelledby="bonus-title">
+        <div class="mini-wheel" aria-hidden="true"><span>+</span></div>
+        <div>
+          <p class="chapter">Ништяк с первой минуты</p>
+          <h3 id="bonus-title">Колесо праздничных бонусов</h3>
+          <p>Сначала маленький подарок — потом знакомство с программами. Сейчас можно покрутить честный интерактивный пример.</p>
+        </div>
+        <button class="button button-dark" type="button" data-bonus-open>Крутить демо-колесо</button>
+      </article>
     </section>
 
     <section class="spotlight section-pad" aria-labelledby="mimes-title">
@@ -245,8 +276,10 @@
           <select id="request-event" name="event" required>
             <option value="">Выберите событие</option>
             <option>Детский праздник</option>
-            <option>День рождения или взрослое событие</option>
             <option>Свадьба или выездная регистрация</option>
+            <option>Юбилей</option>
+            <option>Новый год</option>
+            <option>День рождения или взрослое событие</option>
             <option>Другое событие</option>
           </select>
         </div>
@@ -299,8 +332,10 @@
         <ul>
           <li>три разных арт-направления;</li>
           <li>официальный логотип в первом экране;</li>
-          <li>выбор формата праздника;</li>
+          <li>пять поводов с отдельными сценариями и фотографиями;</li>
           <li>основные услуги, история Юлии и отзывы;</li>
+          <li>демо колеса праздничных бонусов;</li>
+          <li>понятные окна о разработке будущих каталогов;</li>
           <li>адаптивное меню и анимации;</li>
           <li>пример короткой заявки.</li>
         </ul>
@@ -309,8 +344,8 @@
         <h3 id="prototype-next-title">Ещё нужно сделать</h3>
         <ul>
           <li>настоящие фотографии Юлии, команды и окончательные тексты;</li>
-          <li>каталог артистов и профили каждого артиста;</li>
-          <li>каталог программ и полные карточки услуг;</li>
+          <li>заполнить базу артистов, костюмов, программ и декора;</li>
+          <li>настроить правила бонусов и защиту от повторной выдачи;</li>
           <li>живой календарь свободных дат;</li>
           <li>рабочая отправка заявок и подключение мессенджеров;</li>
           <li>административная панель, аналитика и SEO.</li>
@@ -318,6 +353,48 @@
       </section>
     </div>
     <button class="button button-dark prototype-continue" type="button" data-prototype-continue>Понятно — смотреть прототип</button>
+  </dialog>
+
+  <dialog class="module-dialog" data-module-dialog aria-labelledby="module-title">
+    <button class="dialog-close" type="button" aria-label="Закрыть описание функции" data-module-close>×</button>
+    <p class="module-status">Будущий модуль · пока не подключён</p>
+    <h2 id="module-title" data-module-title>Каталог артистов</h2>
+    <p class="module-lead" data-module-lead></p>
+    <dl class="module-facts">
+      <div><dt>Оценка времени</dt><dd data-module-time></dd></div>
+      <div><dt>Сложность</dt><dd data-module-complexity></dd></div>
+      <div><dt>Сейчас</dt><dd>Интерактивный эскиз</dd></div>
+    </dl>
+    <div class="module-columns">
+      <section>
+        <h3>Что подготовить Юлии</h3>
+        <ul data-module-client></ul>
+      </section>
+      <section>
+        <h3>Что сделает Гордей</h3>
+        <ul data-module-build></ul>
+      </section>
+    </div>
+    <div class="module-underhood">
+      <strong>Почему это не «просто поставить кнопку»</strong>
+      <p data-module-underhood></p>
+    </div>
+    <p class="module-honesty">Срок — предварительный ориентир для одного модуля. Он уточняется после инвентаризации материалов и связей с другими разделами.</p>
+    <button class="button button-dark" type="button" data-module-done>Понятно, вернуться к эскизу</button>
+  </dialog>
+
+  <dialog class="bonus-dialog" data-bonus-dialog aria-labelledby="bonus-dialog-title">
+    <button class="dialog-close" type="button" aria-label="Закрыть колесо бонусов" data-bonus-close>×</button>
+    <p class="prototype-kicker">Интерактивный пример</p>
+    <h2 id="bonus-dialog-title">Поймай свой <em>БУММ-бонус</em></h2>
+    <p>Это демонстрация механики. Финальные подарки, вероятность выпадения и правила Юлия утвердит отдельно.</p>
+    <div class="bonus-stage">
+      <span class="wheel-pointer" aria-hidden="true"></span>
+      <div class="bonus-wheel" data-bonus-wheel aria-label="Колесо с примерами праздничных бонусов"><span aria-hidden="true">Ю!</span></div>
+    </div>
+    <p class="bonus-result" data-bonus-result aria-live="polite">Нажмите кнопку — колесо выберет пример бонуса.</p>
+    <button class="spin-button" type="button" data-bonus-spin>Крутить!</button>
+    <button class="text-button" type="button" data-module-preview="bonus-wheel">Что нужно для настоящего запуска?</button>
   </dialog>
 </body>
 </html>
